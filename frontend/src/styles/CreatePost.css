@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.create-container {
+  min-height: 100vh;
+  background: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+}
+
+.create-card {
+  background: #1a1a1a;
+  padding: 40px 35px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 238, 255, 0.4);
+  transition: 0.3s ease;
+}
+
+.create-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 238, 255, 0.6);
+}
+
+.create-card h2 {
+  color: #00eeff;
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(0, 238, 255, 0.7);
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.create-form input,
+.create-form textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #303030;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.create-form input:focus,
+.create-form textarea:focus {
+  border: 1px solid #00eeff;
+  box-shadow: 0 0 8px #00eeff;
+}
+
+.create-form textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.create-form button {
+  padding: 12px 0;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  background: linear-gradient(135deg, #00eeff, #00bfff);
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px #00eeff;
+}
+
+.create-form button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  box-shadow: 0 0 20px #6a11cb;
+  transform: translateY(-2px);
+}
+
+.create-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

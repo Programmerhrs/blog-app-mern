@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  background: rgba(15,23,42,0.8);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* FIXED */
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  box-shadow: 0 6px 20px rgba(77, 193, 247, 0.4);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #00eeff;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+}
+
+.logo span {
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #00eeff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #ff6ec7, #2575fc);
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px rgba(255,110,199,0.7);
+}
+
+
+/* Profile Icon */
+
+.profile-icon{
+  cursor: pointer;
+  font-size: 20px;
+  color: #00eeff;
+  transition: 0.3s ease;
+}
+
+.profile-icon:hover{
+  color:#fff;
+  transform: scale(1.1);
+}
+
+
+/* Profile Dropdown */
+
+.profile-dropdown{
+  position:absolute;
+  top:60px;
+  right:50px;
+  background: rgba(15,23,42,0.95);
+  border-radius:10px;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-width:150px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.7);
+}
+
+.profile-dropdown a,
+.profile-dropdown button{
+  color:#00eeff;
+  text-decoration:none;
+  font-weight:600;
+  background:none;
+  border:none;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover{
+  color:#fff;
+  transform:scale(1.05);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 30px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .profile-dropdown{
+    right:20px;
+  }
+}
+.inbox-link {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.nav-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4444;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50px;
+}
+.icon-link {
+  position: relative;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff4444;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 50px;
+  min-width: 18px;
+  text-align: center;
+}
+.navbar-profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00eeff;
+  box-shadow: 0 0 8px rgba(0, 238, 255, 0.5);
+}

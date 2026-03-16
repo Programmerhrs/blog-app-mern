@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.user-profile {
+  min-height: 100vh;
+  background: #303030;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+}
+
+.user-profile-loading {
+  min-height: 100vh;
+  background: #303030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00eeff;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Back Button */
+.back-btn {
+  background: none;
+  border: 1px solid #00eeff;
+  color: #00eeff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s ease;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.back-btn:hover {
+  background: #00eeff;
+  color: black;
+  transform: translateX(-3px);
+}
+
+/* Profile Header */
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 238, 255, 0.2);
+  flex-wrap: wrap;
+}
+
+.user-avatar-container {
+  flex-shrink: 0;
+}
+
+.user-avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00eeff;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
+}
+
+.user-avatar {
+  font-size: 5rem;
+  background: #303030;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
+}
+
+.user-profile-info h2 {
+  font-size: 1.8rem;
+  color: #00eeff;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+  margin-bottom: 5px;
+}
+
+.user-profile-info p {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.user-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.user-stats span {
+  background: #303030;
+  color: #00eeff;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Follow Button */
+.follow-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #00eeff, #00bfff);
+  color: black;
+  box-shadow: 0 0 12px #00eeff;
+  margin-right: 10px;
+}
+
+.follow-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  box-shadow: 0 0 20px #6a11cb;
+}
+
+.follow-btn.following {
+  background: #303030;
+  color: #00eeff;
+  box-shadow: none;
+  border: 1px solid #00eeff;
+}
+
+.follow-btn.following:hover {
+  background: #ff4444;
+  color: white;
+  border-color: #ff4444;
+  box-shadow: none;
+}
+
+/* Message Button */
+.msg-btn {
+  padding: 10px 25px;
+  border: 1px solid #00eeff;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  background: transparent;
+  color: #00eeff;
+}
+
+.msg-btn:hover {
+  background: #00eeff;
+  color: black;
+}
+
+/* User Posts */
+.user-posts-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.user-posts-section h3 {
+  font-size: 1.8rem;
+  color: #00eeff;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+  margin-bottom: 25px;
+}
+
+.user-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.no-posts-status {
+  color: #aaa;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .user-stats {
+    justify-content: center;
+  }
+}

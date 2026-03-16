@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.feed {
+  min-height: 100vh;
+  background: #303030;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 10px;
+}
+
+.feed-header h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.feed-header h1 span {
+  color: #00eeff;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+}
+
+.create-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00eeff, #00bfff);
+  color: black;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px #00eeff;
+}
+
+.create-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  box-shadow: 0 0 20px #6a11cb;
+  transform: translateY(-2px);
+}
+
+.feed-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feed-status {
+  text-align: center;
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-top: 60px;
+}
+
+/* Search */
+.search-container {
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  padding: 0 10px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 238, 255, 0.3);
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.search-bar input:focus {
+  border: 1px solid #00eeff;
+  box-shadow: 0 0 10px rgba(0, 238, 255, 0.3);
+}
+
+.search-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00eeff, #00bfff);
+  color: black;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 10px #00eeff;
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  box-shadow: 0 0 20px #6a11cb;
+}
+
+.clear-btn {
+  padding: 12px 20px;
+  border: 1px solid #ff4444;
+  border-radius: 50px;
+  background: transparent;
+  color: #ff4444;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.clear-btn:hover {
+  background: #ff4444;
+  color: white;
+}
+
+.search-info {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  padding-left: 10px;
+}

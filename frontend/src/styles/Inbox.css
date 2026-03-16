@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.inbox {
+  min-height: 100vh;
+  background: #303030;
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+}
+
+.inbox-header {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+}
+
+.inbox-header h1 {
+  color: #00eeff;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+}
+
+.inbox-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  height: 70vh;
+}
+
+/* Conversations List */
+.conversations-list {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 15px;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 238, 255, 0.15);
+}
+
+.inbox-status {
+  color: #aaa;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.conversation-item:hover {
+  background: #252525;
+}
+
+.conversation-item.active {
+  background: #252525;
+  border-left: 3px solid #00eeff;
+}
+
+.conv-avatar {
+  font-size: 2rem;
+  background: #303030;
+  padding: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.conv-info h4 {
+  color: #00eeff;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.conv-info p {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.unread-badge {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #ff4444;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 50px;
+}
+
+/* Chat Area */
+.chat-area {
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 238, 255, 0.15);
+  overflow: hidden;
+}
+
+.no-chat-selected {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .inbox-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .conversations-list {
+    max-height: 300px;
+  }
+}
