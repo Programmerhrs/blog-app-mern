@@ -15,6 +15,7 @@ function BlogDetails() {
   const [liked, setLiked] = useState(false);
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState("");
+  const [activeComment, setActiveComment] = useState(null);
 
   const user = JSON.parse(localStorage.getItem("user"));
   const token = localStorage.getItem("token");
@@ -196,11 +197,48 @@ function BlogDetails() {
           ) : (
             comments.map((c, index) => (
               <div key={index} className="comment-item">
-                <span className="comment-name">👤 {c.name}</span>
+
+                {/* Commenter Name — clickable */}
+                <div className="comment-header">
+                  <span
+                    className="comment-name"
+                    onClick={() => {
+                      if (user && c.user !== user.id) {
+                        setActiveComment(activeComment === index ? null : index);
+                      }
+                    }}
+                    style={{ cursor: user && c.user !== user.id ? "pointer" : "default" }}
+                  >
+                    👤 {c.name}
+                    {user && c.user !== user.id && (
+                      <span className="comment-arrow">
+                        {activeComment === index ? " ▲" : " ▼"}
+                      </span>
+                    )}
+                  </span>
+
+                  {/* Popup actions */}
+                  {activeComment === index && user && c.user !== user.id && (
+                    <div className="comment-actions-popup">
+                      <button
+                        onClick={() => navigate(`/user/${c.user}`)}
+                      >
+                        👤 View Profile
+                      </button>
+                      <button
+                        onClick={() => navigate(`/inbox?user=${c.user}&name=${c.name}`)}
+                      >
+                        💬 Message
+                      </button>
+                    </div>
+                  )}
+                </div>
+
                 <p className="comment-text">{c.text}</p>
                 <span className="comment-date">
                   {new Date(c.createdAt).toLocaleDateString()}
                 </span>
+
               </div>
             ))
           )}
