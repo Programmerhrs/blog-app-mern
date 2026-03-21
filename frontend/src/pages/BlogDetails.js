@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/BlogDetails.css";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function BlogDetails() {
 
   const { id } = useParams();
@@ -18,7 +20,7 @@ function BlogDetails() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/posts/${id}`)
+    axios.get(`${API_URL}/api/posts/${id}`)
       .then((res) => {
         setBlog(res.data);
         setLikes(res.data.likes?.length || 0);
@@ -42,7 +44,7 @@ function BlogDetails() {
 
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/posts/like/${id}`,
+        `${API_URL}/api/posts/like/${id}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -64,7 +66,7 @@ function BlogDetails() {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/posts/comment/${id}`,
+        `${API_URL}/api/posts/comment/${id}`,
         { text: commentText, name: user.name },
         { headers: { Authorization: `Bearer ${token}` } }
       );
