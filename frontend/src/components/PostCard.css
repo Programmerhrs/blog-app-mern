@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 10px;
   transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .post-card:hover {
@@ -48,6 +49,7 @@
   display: flex;
   gap: 10px;
   margin-top: 5px;
+  flex-wrap: wrap;
 }
 
 .post-actions button {
@@ -59,6 +61,7 @@
   cursor: pointer;
   font-size: 0.85rem;
   transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .post-actions button:hover {
@@ -75,7 +78,6 @@
   background: #cc0000;
 }
 
-/* Comments Section */
 .comments-section {
   background: #252525;
   border-radius: 10px;
@@ -113,10 +115,12 @@
   display: flex;
   gap: 8px;
   margin-top: 5px;
+  flex-wrap: wrap;
 }
 
 .comment-input input {
   flex: 1;
+  min-width: 150px;
   padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -125,6 +129,7 @@
   font-size: 0.85rem;
   outline: none;
   transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .comment-input input:focus {
@@ -141,6 +146,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .comment-input button:hover {
@@ -159,10 +165,36 @@
   cursor: pointer;
   transition: 0.3s ease;
   box-shadow: 0 0 10px #00eeff;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
 }
 
 .read-btn:hover {
   background: linear-gradient(135deg, #2575fc, #6a11cb);
   box-shadow: 0 0 20px #6a11cb;
   color: white;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 480px) {
+  .post-card {
+    padding: 18px;
+  }
+
+  .post-title {
+    font-size: 1.1rem;
+  }
+
+  .post-image {
+    height: 170px;
+  }
+
+  .comment-input {
+    flex-direction: column;
+  }
+
+  .comment-input input,
+  .comment-input button {
+    width: 100%;
+  }
 }

@@ -27,7 +27,6 @@
   height: 70vh;
 }
 
-/* Conversations List */
 .conversations-list {
   background: #1a1a1a;
   border-radius: 15px;
@@ -94,7 +93,6 @@
   border-radius: 50px;
 }
 
-/* Chat Area */
 .chat-area {
   background: #1a1a1a;
   border-radius: 15px;
@@ -111,14 +109,42 @@
   font-size: 1rem;
 }
 
-/* Responsive */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
+  .inbox {
+    padding: 20px 10px;
+  }
+
+  .inbox-header h1 {
+    font-size: 1.5rem;
+  }
+
   .inbox-container {
     grid-template-columns: 1fr;
     height: auto;
+    gap: 15px;
   }
 
   .conversations-list {
-    max-height: 300px;
+    max-height: 280px;
+  }
+
+  .chat-area {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inbox-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .conv-avatar {
+    font-size: 1.5rem;
+    padding: 6px;
+  }
+
+  .conv-info h4 {
+    font-size: 0.85rem;
   }
 }

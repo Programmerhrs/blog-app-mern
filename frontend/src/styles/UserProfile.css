@@ -18,7 +18,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Back Button */
 .back-btn {
   background: none;
   border: 1px solid #00eeff;
@@ -39,7 +38,6 @@
   transform: translateX(-3px);
 }
 
-/* Profile Header */
 .user-profile-header {
   display: flex;
   align-items: center;
@@ -103,7 +101,6 @@
   font-weight: 600;
 }
 
-/* Follow Button */
 .follow-btn {
   padding: 10px 25px;
   border: none;
@@ -139,7 +136,6 @@
   box-shadow: none;
 }
 
-/* Message Button */
 .msg-btn {
   padding: 10px 25px;
   border: 1px solid #00eeff;
@@ -158,7 +154,6 @@
   color: black;
 }
 
-/* User Posts */
 .user-posts-section {
   max-width: 900px;
   margin: 0 auto;
@@ -182,14 +177,46 @@
   font-size: 1rem;
 }
 
-/* Responsive */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
+  .user-profile {
+    padding: 25px 15px;
+  }
+
   .user-profile-header {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .user-profile-info h2 {
+    font-size: 1.5rem;
   }
 
   .user-stats {
     justify-content: center;
+  }
+
+  .follow-btn,
+  .msg-btn {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .user-posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-posts-section h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-profile-info h2 {
+    font-size: 1.3rem;
   }
 }

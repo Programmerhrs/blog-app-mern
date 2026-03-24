@@ -7,7 +7,6 @@
   padding: 40px 20px;
 }
 
-/* Profile Header */
 .profile-header {
   display: flex;
   align-items: center;
@@ -18,6 +17,7 @@
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 238, 255, 0.2);
+  flex-wrap: wrap;
 }
 
 .profile-avatar {
@@ -51,7 +51,46 @@
   box-shadow: 0 0 8px rgba(0, 238, 255, 0.3);
 }
 
-/* My Posts Section */
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.profile-avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00eeff;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
+}
+
+.upload-label {
+  background: linear-gradient(135deg, #00eeff, #00bfff);
+  color: black;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.upload-label:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+}
+
 .my-posts {
   max-width: 900px;
   margin: 0 auto;
@@ -121,6 +160,25 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex-shrink: 0;
+}
+
+.edit-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #00eeff;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  transform: scale(1.05);
 }
 
 .delete-btn {
@@ -152,74 +210,55 @@
   text-decoration: underline;
 }
 
-/* Responsive */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
+  .profile {
+    padding: 25px 15px;
+  }
+
   .profile-header {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .profile-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-stats {
+    justify-content: center;
   }
 
   .my-post-card {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .my-post-image {
     width: 100%;
     height: 180px;
   }
-}
-.edit-btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #00eeff;
-  color: black;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-  font-size: 0.85rem;
+
+  .my-post-actions {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    flex: 1;
+    text-align: center;
+  }
 }
 
-.edit-btn:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  color: white;
-  transform: scale(1.05);
-}
-/* Profile Avatar with Image */
-.profile-avatar-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+@media (max-width: 480px) {
+  .profile-info h2 {
+    font-size: 1.3rem;
+  }
 
-.profile-avatar-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #00eeff;
-  box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
-}
-
-.upload-label {
-  background: linear-gradient(135deg, #00eeff, #00bfff);
-  color: black;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.upload-label:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  color: white;
-}
-.profile-stats {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 5px;
+  .my-posts h3 {
+    font-size: 1.4rem;
+  }
 }

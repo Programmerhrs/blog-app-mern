@@ -11,8 +11,9 @@
   box-sizing: border-box;
 }
 
-/* Make all children respect box-sizing */
-.register *, .register *::before, .register *::after {
+.register *,
+.register *::before,
+.register *::after {
   box-sizing: border-box;
 }
 
@@ -39,9 +40,14 @@
   text-shadow: 0 0 12px rgba(0, 238, 255, 0.7);
 }
 
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .register-form input {
   width: 100%;
-  padding: 10px 12px;          /* slightly smaller */
+  padding: 10px 12px;
   margin-bottom: 15px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -50,6 +56,7 @@
   font-size: 0.95rem;
   outline: none;
   transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .register-form input:focus {
@@ -69,15 +76,17 @@
   cursor: pointer;
   transition: 0.3s ease;
   box-shadow: 0 0 12px #00eeff, 0 0 20px #00bfff;
+  font-family: 'Poppins', sans-serif;
 }
 
-.btn-register:hover {
+.btn-register1:hover {
   background: linear-gradient(135deg, #2575fc, #6a11cb);
   transform: translateY(-2px);
   box-shadow: 0 0 20px #6a11cb, 0 0 35px #2575fc;
+  color: white;
 }
 
-/* Responsive adjustments */
+/* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
   .register-card {
     padding: 25px 20px;
@@ -88,13 +97,7 @@
   }
 
   .register-form input {
-    padding: 10px 12px;
     font-size: 0.9rem;
-  }
-
-  .btn-register {
-    font-size: 0.95rem;
-    padding: 10px 0;
   }
 }
 
@@ -104,16 +107,11 @@
   }
 
   .register-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .register-form input {
-    padding: 8px 10px;
     font-size: 0.85rem;
-  }
-
-  .btn-register {
-    font-size: 0.9rem;
-    padding: 8px 0;
+    padding: 8px 10px;
   }
 }

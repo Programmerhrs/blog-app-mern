@@ -13,6 +13,8 @@
   align-items: center;
   max-width: 700px;
   margin: 0 auto 30px auto;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .notifications-header h1 {
@@ -31,6 +33,7 @@
   cursor: pointer;
   transition: 0.3s ease;
   font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
 }
 
 .clear-btn:hover {
@@ -113,4 +116,34 @@
   border-radius: 50%;
   flex-shrink: 0;
   box-shadow: 0 0 6px #00eeff;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .notifications-page {
+    padding: 25px 15px;
+  }
+
+  .notifications-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .notif-item {
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  .notif-content p {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .notif-icon {
+    font-size: 1.2rem;
+  }
 }

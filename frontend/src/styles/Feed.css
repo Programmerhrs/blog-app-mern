@@ -14,6 +14,8 @@
   max-width: 1200px;
   margin: 0 auto 40px auto;
   padding: 0 10px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .feed-header h1 {
@@ -37,6 +39,7 @@
   cursor: pointer;
   transition: 0.3s ease;
   box-shadow: 0 0 12px #00eeff;
+  white-space: nowrap;
 }
 
 .create-btn:hover {
@@ -75,10 +78,12 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .search-bar input {
   flex: 1;
+  min-width: 200px;
   padding: 12px 20px;
   border-radius: 50px;
   border: 1px solid rgba(0, 238, 255, 0.3);
@@ -107,6 +112,7 @@
   transition: 0.3s ease;
   font-family: 'Poppins', sans-serif;
   box-shadow: 0 0 10px #00eeff;
+  white-space: nowrap;
 }
 
 .search-btn:hover {
@@ -126,6 +132,7 @@
   cursor: pointer;
   transition: 0.3s ease;
   font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
 }
 
 .clear-btn:hover {
@@ -138,4 +145,58 @@
   font-size: 0.9rem;
   margin-top: 12px;
   padding-left: 10px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .feed {
+    padding: 25px 15px;
+  }
+
+  .feed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .feed-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .create-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .search-btn,
+  .clear-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feed {
+    padding: 20px 10px;
+  }
+
+  .feed-header h1 {
+    font-size: 1.3rem;
+  }
 }

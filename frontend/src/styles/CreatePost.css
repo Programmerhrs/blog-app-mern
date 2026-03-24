@@ -49,6 +49,8 @@
   font-family: 'Poppins', sans-serif;
   outline: none;
   transition: 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .create-form input:focus,
@@ -85,4 +87,30 @@
 .create-form button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .create-container {
+    padding: 25px 15px;
+    align-items: flex-start;
+  }
+
+  .create-card {
+    padding: 25px 20px;
+  }
+
+  .create-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .create-card {
+    padding: 20px 15px;
+  }
+
+  .create-card h2 {
+    font-size: 1.3rem;
+  }
 }
